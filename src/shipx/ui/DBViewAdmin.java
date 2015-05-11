@@ -247,24 +247,22 @@ public class DBViewAdmin extends javax.swing.JFrame {
 private static String message;  
 private static String messageType;
 private static String QUERY_ALL="from ProyardMessages";
-//private static String QUERY_SEARCH="from ProyardMessages a  where a.message  is null or a.message like '"+
-//        message+" and  ( a.messageType  is null or a.messageType like '"+ messageType;
 private static String QUERY_SEARCH="from ProyardMessages a  where (:message  is null or a.message like :message )"+
         "and  ( :messageType  is null or a.messageType = :messageType) and  ( :processStatus  is null or a.processStatus = :processStatus)"+
         "and  ( :processStatus  is null or a.processStatus = :processStatus)and  ( :source  is null or a.source = :source) and  ( :processStatus  is null or a.processStatus = :processStatus) "+ 
-        "and  ( :sequenceNo  is null or a.sequenceNo = :sequenceNo)";
+        "and  ( :sequenceNo  is null or a.sequenceNo = :sequenceNo) and  ( :timeStamp  is null or a.timeStamp = :timeStamp)";
 
 private void executeHQLQuery(String hql) {
     try {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         Query q = session.createQuery(hql);
-//        System.out.println("SDFSDFDF  "+((messageText.getText().isEmpty()) ? null : (messageText.getText()+"%")));
         q.setParameter("message", (messageText.getText().isEmpty()) ? null : (messageText.getText()+"%"));
         q.setParameter("messageType", (messageTypeText.getText().isEmpty()) ? null : messageTypeText.getText());
         q.setParameter("processStatus", (processStatusText.getText().isEmpty()) ? null : processStatusText.getText());
         q.setParameter("source", (sourceText.getText().isEmpty()) ? null : sourceText.getText());
         q.setParameter("sequenceNo", (sequenceNumberText.getText().isEmpty()) ? null : sequenceNumberText.getText());
+        q.setParameter("timeStamp", (date.getDate()));
         List resultList = q.list();
         displayResult(resultList);
         session.getTransaction().commit();
@@ -275,17 +273,6 @@ private void executeHQLQuery(String hql) {
 
 
 private void runQueryBasedOnFirstName() {
-    //executeHQLQuery(QUERY_ALL);
-//    message = messageText.getText()+"%'";
-//    messageType = messageTypeText.getText();
-//    System.out.println("Oh YEAH    "  +messageType);
-//    executeHQLQuery("from ProyardMessages a  where a.message  is null or a.message like '"+
-//        message+" and  ( a.messageType  is null or a.messageType = '"+ messageType+"')");
-//    String hql = "from Stock s where s.stockCode = :stockCode";
-//List result = session.createQuery(hql)
-//.setParameter("stockCode", "7277")
-//.list();
-//    
     executeHQLQuery(QUERY_SEARCH);
 }
 
