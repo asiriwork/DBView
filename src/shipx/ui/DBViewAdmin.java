@@ -55,7 +55,7 @@ public class DBViewAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Proyard Messages");
+        jLabel1.setText("Proyard Messages Table View");
 
         resultTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,6 +76,12 @@ public class DBViewAdmin extends javax.swing.JFrame {
         queryButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 queryButtonActionPerformed(evt);
+            }
+        });
+
+        date.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateActionPerformed(evt);
             }
         });
 
@@ -100,11 +106,11 @@ public class DBViewAdmin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1112, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1112, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5)
@@ -120,30 +126,31 @@ public class DBViewAdmin extends javax.swing.JFrame {
                                 .addGap(46, 46, 46)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(processStatusText, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(messageTypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66)
-                                .addComponent(sourceText, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                    .addComponent(messageTypeText, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(sequenceNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(118, 118, 118)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(66, 66, 66)
+                                        .addComponent(sourceText, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(sequenceNumberText, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(118, 118, 118))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(453, 453, 453)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(queryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(453, 453, 453)
-                .addComponent(queryButton, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,6 +184,10 @@ public class DBViewAdmin extends javax.swing.JFrame {
     private void messageTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_messageTextActionPerformed
+
+    private void dateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,15 +243,23 @@ public class DBViewAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField sourceText;
     // End of variables declaration//GEN-END:variables
 
+    
+private static String message;  
+private static String messageType;
 private static String QUERY_ALL="from ProyardMessages";
-//private static String QUERY_ALL="from ProyardMessages";
-//private static String QUERY_ALL="from ProyardMessages";
-//private static String QUERY_ALL="from ProyardMessages";
+//private static String QUERY_SEARCH="from ProyardMessages a  where a.message  is null or a.message like '"+
+//        message+" and  ( a.messageType  is null or a.messageType like '"+ messageType;
+private static String QUERY_SEARCH="from ProyardMessages a  where (:message  is null or a.message like :message )"+
+        "and  ( :messageType  is null or a.messageType = :messageType)";
+
 private void executeHQLQuery(String hql) {
     try {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         Query q = session.createQuery(hql);
+//        System.out.println("SDFSDFDF  "+((messageText.getText().isEmpty()) ? null : (messageText.getText()+"%")));
+        q.setParameter("message", (messageText.getText().isEmpty()) ? null : (messageText.getText()+"%"));
+        q.setParameter("messageType", (messageTypeText.getText().isEmpty()) ? null : messageTypeText.getText());
         List resultList = q.list();
         displayResult(resultList);
         session.getTransaction().commit();
@@ -249,9 +268,20 @@ private void executeHQLQuery(String hql) {
     }
 }
 
+
 private void runQueryBasedOnFirstName() {
-    executeHQLQuery(QUERY_ALL);
-    
+    //executeHQLQuery(QUERY_ALL);
+//    message = messageText.getText()+"%'";
+//    messageType = messageTypeText.getText();
+//    System.out.println("Oh YEAH    "  +messageType);
+//    executeHQLQuery("from ProyardMessages a  where a.message  is null or a.message like '"+
+//        message+" and  ( a.messageType  is null or a.messageType = '"+ messageType+"')");
+//    String hql = "from Stock s where s.stockCode = :stockCode";
+//List result = session.createQuery(hql)
+//.setParameter("stockCode", "7277")
+//.list();
+//    
+    executeHQLQuery(QUERY_SEARCH);
 }
 
 private void displayResult(List resultList) {
