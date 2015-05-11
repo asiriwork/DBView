@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/asiri/NetBeansProjects/DBView/src/hibernate.cfg.xml</file>
+            <file>file:/home/asiri/NetBeansProjects/DBView/src/hibernate.reveng.xml</file>
+            <file>file:/home/asiri/NetBeansProjects/DBView/src/shipx/entity/ProyardMessages.hbm.xml</file>
+            <file>file:/home/asiri/NetBeansProjects/DBView/src/shipx/entity/ProyardMessages.java</file>
+            <file>file:/home/asiri/NetBeansProjects/DBView/src/shipx/ui/DBViewAdmin.java</file>
+            <file>file:/home/asiri/NetBeansProjects/DBView/src/shipx/util/HibernateUtil.java</file>
+        </group>
+    </open-files>
+</project-private>

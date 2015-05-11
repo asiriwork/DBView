@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2015 8:38:31 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="shipx.entity.ProyardMessages" table="PROYARD_MESSAGES" catalog="PROYARD" optimistic-lock="version">
+        <id name="messageId" type="java.lang.Long">
+            <column name="MESSAGE_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="timeStamp" type="date">
+            <column name="TIME_STAMP" length="10" not-null="true" />
+        </property>
+        <property name="messageType" type="string">
+            <column name="MESSAGE_TYPE" length="45" not-null="true" />
+        </property>
+        <property name="sequenceNo" type="long">
+            <column name="SEQUENCE_NO" not-null="true" />
+        </property>
+        <property name="message" type="string">
+            <column name="MESSAGE" length="1024" not-null="true" />
+        </property>
+        <property name="crc" type="string">
+            <column name="CRC" length="45" />
+        </property>
+        <property name="processStatus" type="string">
+            <column name="PROCESS_STATUS" length="45" />
+        </property>
+        <property name="source" type="string">
+            <column name="SOURCE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
